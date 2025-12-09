@@ -1,0 +1,53 @@
+@use "functions" as f;
+
+$font1: "League Spartan", sans-serif;
+
+$typographies: (
+  "text-preset-1": (
+    "font-family": $font1,
+    "font-weight": 600,
+    "font-size": f.rem(48),
+    "line-height": 0.9,
+    "letter-spacing": f.em(0),
+  ),
+
+  "text-preset-2": (
+    "font-family": $font1,
+    "font-weight": 600,
+    "font-size": f.rem(40),
+    "line-height": 1,
+    "letter-spacing": f.em(0),
+  ),
+
+  "text-preset-3-bold": (
+    "font-family": $font1,
+    "font-weight": 700,
+    "font-size": f.rem(16),
+    "line-height": 1.4,
+    "letter-spacing": f.em(7),
+  ),
+
+  "text-preset-3-semibold": (
+    "font-family": $font1,
+    "font-weight": 600,
+    "font-size": f.rem(16),
+    "line-height": 1,
+    "letter-spacing": f.em(-0.7),
+  ),
+
+  "text-preset-3-medium": (
+    "font-family": $font1,
+    "font-weight": 500,
+    "font-size": f.rem(16),
+    "line-height": 1.4,
+    "letter-spacing": f.em(-0.5),
+  ),
+
+  "text-preset-4": (
+    "font-family": $font1,
+    "font-weight": 500,
+    "font-size": f.rem(15),
+    "line-height": 1,
+    "letter-spacing": f.em(12.5),
+  ),
+);

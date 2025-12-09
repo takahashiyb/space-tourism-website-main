@@ -1,0 +1,21 @@
+.grid {
+  --space-lr: 40px;
+  --space-gap: 20px;
+  --col-count: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr repeat(
+      var(--col-count),
+      calc(
+        (
+            min(100% - var(--space-lr), 60rem) - (var(--col-count) - 1) *
+              var(--space-gap)
+          ) / var(--col-count)
+      )
+    )
+    1fr;
+
+  gap: var(--space-gap);
+}

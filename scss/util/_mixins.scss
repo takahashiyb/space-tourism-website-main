@@ -1,0 +1,60 @@
+@use "functions" as f;
+@use "sass:math";
+@use "sass:map" as map;
+@use "fonts" as t;
+
+// Based on: https://chriskirknielsen.com/blog/modern-fluid-typography-with-clamp/
+@mixin fs-fluid($min-vw, $max-vw, $min-value, $max-value) {
+  $factor: math.div(1, ($max-vw - $min-vw)) * ($max-value - $min-value);
+  $calc-value: calc($min-value - $min-vw * $factor + 100vw * $factor);
+
+  font-size: $min-value; // Fallback for older browsers
+  font-size: clamp(
+    #{if($min-value > $max-value, $max-value, $min-value)},
+    #{$calc-value},
+    #{if($min-value > $max-value, $min-value, $max-value)}
+  );
+}
+
+@mixin fs-typography-switching($small-preset, $large-preset) {
+  $map-small: map.get(t.$typographies, $small-preset);
+  $map-large: map.get(t.$typographies, $large-preset);
+
+  font-family: map.get($map-small, font-family);
+  font-weight: map.get($map-small, font-weight);
+  line-height: map.get($map-small, line-height);
+  letter-spacing: map.get($map-small, letter-spacing);
+
+  @include fs-fluid(
+    f.rem(320),
+    map.get($breakpoints, large),
+    map.get($map-small, font-size),
+    map.get($map-large, font-size)
+  );
+
+  @include breakpoint(large) {
+    font-family: map.get($map-large, font-family);
+    font-weight: map.get($map-large, font-weight);
+    line-height: map.get($map-large, line-height);
+    letter-spacing: map.get($map-large, letter-spacing);
+  }
+}
+
+// 700px, 900px, >1440px
+$breakpoints: (
+  "medium": f.rem(700),
+  "large": f.rem(840),
+  "xlarge": f.rem(1440),
+);
+
+@mixin breakpoint($size) {
+  @media (width >= map.get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (width < map.get($breakpoints, $size)) {
+    @content;
+  }
+}
