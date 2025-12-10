@@ -1,0 +1,34 @@
+@use "../util/" as u;
+
+.tab-list {
+  display: flex;
+  gap: var(--spacing-0500);
+
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.tab-option {
+  --transparency: 0;
+
+  padding-bottom: var(--spacing-0100);
+
+  border-style: solid;
+  border-color: hsl(var(--white), var(--transparency));
+  border-width: 0 0 2px 0;
+
+  @include u.fs-typography-static("text-preset-8");
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.tab-option:hover,
+.tab-option:focus {
+  --transparency: 0.5;
+}
+
+.tab-option:active {
+  --transparency: 1;
+}
