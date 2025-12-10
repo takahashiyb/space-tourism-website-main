@@ -19,13 +19,18 @@
 }
 
 .design-content {
-  column-count: 2;
+  column-count: 1;
   column-fill: balance;
   gap: 60px;
+  word-break: break-word;
   > * {
     break-inside: avoid; /* keep whole item in one column */
     page-break-inside: avoid; /* older browsers */
     -webkit-column-break-inside: avoid; /* Safari/Chrome legacy */
+  }
+
+  @include u.breakpoint(large) {
+    column-count: 2;
   }
 }
 
@@ -129,9 +134,14 @@ hr {
 }
 
 .design-content-spacing {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  display: flex;
   gap: var(--spacing-0400);
+  flex-wrap: wrap;
+  justify-items: start;
+
+  > div {
+    flex: 1 0 1;
+  }
 }
 
 .spacing-display {

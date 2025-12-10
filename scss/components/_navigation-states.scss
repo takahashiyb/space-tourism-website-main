@@ -1,0 +1,46 @@
+@use "../util/" as u;
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-0500);
+
+  list-style-type: none;
+  padding-inline-start: 0;
+
+  @include u.breakpoint(medium) {
+    flex-direction: row;
+  }
+}
+
+.nav-option {
+  --transparency: 0;
+  --width-right: 2px;
+  --width-bottom: 0;
+
+  border-style: solid;
+  border-color: hsl(var(--white), var(--transparency));
+  border-width: 0 var(--width-right) var(--width-bottom) 0;
+
+  @include u.fs-typography-static("text-preset-8");
+
+  @include u.breakpoint(medium) {
+    --width-right: 0;
+    --width-bottom: 2px;
+
+    padding-bottom: var(--spacing-0400);
+  }
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.nav-option:hover,
+.nav-option:focus {
+  --transparency: 0.5;
+}
+
+.nav-option:active {
+  --transparency: 1;
+}

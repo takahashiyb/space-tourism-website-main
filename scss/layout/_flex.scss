@@ -2,11 +2,15 @@
 
 .flex {
   --padding-top-bottom: #{u.em(0)};
-  --padding-inline: #{u.em(165)};
+  --padding-inline: #{u.em(40)};
 
   display: flex;
   flex-direction: column;
   padding: var(--padding-top-bottom) var(--padding-inline);
+
+  @include u.breakpoint(medium) {
+    --padding-inline: #{u.em(165)};
+  }
 
   &__header {
     --padding-top-bottom: #{u.em(64)};
