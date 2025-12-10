@@ -3,9 +3,366 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Design System</title>
   </head>
   <body>
-    <header></header>
+    <div class="background">
+      <header>
+        <div class="flex flex__header">
+          <div><img src="./assets/shared/logo.svg" alt="" /></div>
+          <div><h1 class="text-preset-5">STYLE GUIDE</h1></div>
+        </div>
+      </header>
+      <section class="colors">
+        <div class="flex flex__section">
+          <div class="flex flex__title">
+            <span>01</span>
+            <h2>COLORS</h2>
+          </div>
+          <div class="property-title">
+            <h3>Blue</h3>
+            <hr />
+          </div>
+          <div class="design-content">
+            <div>
+              <div
+                class="color-display dark"
+                style="background-color: hsl(var(--blue-900))"
+              >
+                <p class="transparent">#0B0D17</p>
+                <p>BLUE-900</p>
+              </div>
+              <div class="color-detail">
+                <p class="property-label">RGB</p>
+                <p>11, 13, 23</p>
+                <p class="property-label">HSL</p>
+                <p>230°, 35%, 7%</p>
+              </div>
+            </div>
+            <div>
+              <div
+                class="color-display light"
+                style="background-color: hsl(var(--blue-300))"
+              >
+                <p class="transparent">#D0D6F9</p>
+                <p>BLUE-300</p>
+              </div>
+              <div class="color-detail">
+                <p class="property-label">RGB</p>
+                <p>208, 214, 249</p>
+                <p class="property-label">HSL</p>
+                <p>231°, 77%, 90%</p>
+              </div>
+            </div>
+          </div>
+          <div class="property-title">
+            <h3>White</h3>
+            <hr />
+          </div>
+          <div class="design-content">
+            <div>
+              <div
+                class="color-display light"
+                style="background-color: hsl(var(--white))"
+              >
+                <p class="transparent">#FFFFFF</p>
+                <p>WHITE</p>
+              </div>
+              <div class="color-detail">
+                <p class="property-label">RGB</p>
+                <p>255, 255, 255</p>
+                <p class="property-label">HSL</p>
+                <p>0°, 0%, 100%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="typography">
+        <div class="flex flex__section">
+          <div class="flex flex__title">
+            <span>02</span>
+            <h2>TYPOGRAPHY</h2>
+          </div>
+          <div class="design-content">
+            <div>
+              <div class="property-title">
+                <h3>Text Preset 1 - Bellefair Regular</h3>
+                <p>144px - 171.9% Line Height (Normal) - 0px Letter Spacing</p>
+                <hr />
+              </div>
+              <div class="typography-display text-preset-1">EARTH</div>
+            </div>
+            <div>
+              <div class="property-title">
+                <h3>Text Preset 2 - Bellefair Regular</h3>
+                <p>100px - 114.6% Line Height (Normal) - 0px Letter Spacing</p>
+                <hr />
+              </div>
+              <div class="typography-display text-preset-2">VENUS</div>
+            </div>
+            <div>
+              <div class="property-title">
+                <h3>Text Preset 3 - Bellefair Regular</h3>
+                <p>56px - 64.2% Line Height (Normal) - 0px Letter Spacing</p>
+                <hr />
+              </div>
+              <div class="typography-display text-preset-3">
+                JUPITER & SATURN
+              </div>
+            </div>
+            <div>
+              <div class="property-title">
+                <h3>Text Preset 4 - Bellefair Regular</h3>
+                <p>32px - 36.7% Line Height (Normal) - 0px Letter Spacing</p>
+                <hr />
+              </div>
+              <div class="typography-display text-preset-4">
+                URANUS, NEPTUNE, & PLUTO
+              </div>
+            </div>
+            <div>
+              <div class="property-title">
+                <h3>Text Preset 5 - Barlow Condensed Regular</h3>
+                <p>28px - 33.6% Line Height (Normal) - 4px Letter Spacing</p>
+                <hr />
+              </div>
+              <div class="typography-display text-preset-5">
+                HAUMEA, SEDNA, ERIS, & CERES
+              </div>
+            </div>
+            <div>
+              <div class="property-title">
+                <h3>Text Preset 6 - Bellefair Regular</h3>
+                <p>28px - 32.1% Line Height (Normal) - 0px Letter Spacing</p>
+                <hr />
+              </div>
+              <div class="typography-display text-preset-6">384,400 KM</div>
+            </div>
+            <div>
+              <div class="property-title">
+                <h3>Text Preset 7 - Barlow Condensed Regular</h3>
+                <p>14px - 16.8% Line Height (Normal) - 2px Letter Spacing</p>
+                <hr />
+              </div>
+              <div class="typography-display text-preset-7">AVG. DISTANCE</div>
+            </div>
+            <div>
+              <div class="property-title">
+                <h3>Text Preset 8 - Barlow Condensed Regular</h3>
+                <p>16px - 19.2% Line Height (Normal) - 2px Letter Spacing</p>
+                <hr />
+              </div>
+              <div class="typography-display text-preset-8">EUROPA</div>
+            </div>
+            <div>
+              <div class="property-title">
+                <h3>Text Preset 9 - Barlow Condensed Regular</h3>
+                <p>18px - 180% Line Height - 0px Letter Spacing</p>
+                <hr />
+              </div>
+              <div class="typography-display text-preset-9">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi
+                neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium,
+                ligula sollicitudin laoreet viverra, tortor libero sodales leo,
+                eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.
+                Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh
+                nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel,
+                nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor
+                libero sodales leo, eget blandit nunc tortor eu nibh. Nullam
+                mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit
+                amet, consectetuer adipiscing elit. Phasellus hendrerit.
+                Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel,
+                dapibus id, mattis vel, nisi.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="spacing">
+        <div class="flex flex__section">
+          <div class="flex flex__title">
+            <span>03</span>
+            <h2>SPACING</h2>
+          </div>
+          <div class="design-content-spacing">
+            <div>
+              <div
+                class="property-title"
+                style="display: flex; align-items: center; gap: 16px"
+              >
+                <h3>1600</h3>
+                <p>128px</p>
+              </div>
+              <div class="spacing-display" style="width: 128px"></div>
+            </div>
+            <div>
+              <div
+                class="property-title"
+                style="display: flex; align-items: center; gap: 16px"
+              >
+                <h3>1200</h3>
+                <p>96px</p>
+              </div>
+              <div class="spacing-display" style="width: 96px"></div>
+            </div>
+            <div>
+              <div
+                class="property-title"
+                style="display: flex; align-items: center; gap: 16px"
+              >
+                <h3>1000</h3>
+                <p>80px</p>
+              </div>
+              <div class="spacing-display" style="width: 80px"></div>
+            </div>
+            <div>
+              <div
+                class="property-title"
+                style="display: flex; align-items: center; gap: 16px"
+              >
+                <h3>800</h3>
+                <p>64px</p>
+              </div>
+              <div class="spacing-display" style="width: 64px"></div>
+            </div>
+            <div>
+              <div
+                class="property-title"
+                style="display: flex; align-items: center; gap: 16px"
+              >
+                <h3>600</h3>
+                <p>48px</p>
+              </div>
+              <div class="spacing-display" style="width: 48px"></div>
+            </div>
+            <div>
+              <div
+                class="property-title"
+                style="display: flex; align-items: center; gap: 16px"
+              >
+                <h3>500</h3>
+                <p>40px</p>
+              </div>
+              <div class="spacing-display" style="width: 40px"></div>
+            </div>
+            <div>
+              <div
+                class="property-title"
+                style="display: flex; align-items: center; gap: 16px"
+              >
+                <h3>400</h3>
+                <p>32px</p>
+              </div>
+              <div class="spacing-display" style="width: 32px"></div>
+            </div>
+            <div>
+              <div
+                class="property-title"
+                style="display: flex; align-items: center; gap: 16px"
+              >
+                <h3>300</h3>
+                <p>24px</p>
+              </div>
+              <div class="spacing-display" style="width: 24px"></div>
+            </div>
+            <div>
+              <div
+                class="property-title"
+                style="display: flex; align-items: center; gap: 16px"
+              >
+                <h3>200</h3>
+                <p>16px</p>
+              </div>
+              <div class="spacing-display" style="width: 16px"></div>
+            </div>
+            <div>
+              <div
+                class="property-title"
+                style="display: flex; align-items: center; gap: 16px"
+              >
+                <h3>160</h3>
+                <p>12px</p>
+              </div>
+              <div class="spacing-display" style="width: 12px"></div>
+            </div>
+            <div>
+              <div
+                class="property-title"
+                style="display: flex; align-items: center; gap: 16px"
+              >
+                <h3>100</h3>
+                <p>8px</p>
+              </div>
+              <div class="spacing-display" style="width: 8px"></div>
+            </div>
+            <div>
+              <div
+                class="property-title"
+                style="display: flex; align-items: center; gap: 16px"
+              >
+                <h3>50</h3>
+                <p>4px</p>
+              </div>
+              <div class="spacing-display" style="width: 4px"></div>
+            </div>
+            <div>
+              <div
+                class="property-title"
+                style="display: flex; align-items: center; gap: 16px"
+              >
+                <h3>25</h3>
+                <p>2px</p>
+              </div>
+              <div class="spacing-display" style="width: 2px"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="components-logo">
+        <div class="flex flex__section">
+          <div class="flex flex__title">
+            <span>04</span>
+            <h2>COMPONENTS - LOGO</h2>
+          </div>
+          <div class="design-content">
+            <div><img src="./assets/shared/logo.svg" alt="icon logo" /></div>
+          </div>
+        </div>
+      </section>
+      <section class="components-navigation-states">
+        <div class="flex flex__section">
+          <div class="flex flex__title">
+            <span>05</span>
+            <h2>COMPONENTS - NAVIGATION STATES</h2>
+          </div>
+          <div class="design-content">
+            <div></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="flex flex__section">
+          <div class="flex flex__title">
+            <span>03</span>
+            <h2>COMPONENTS -</h2>
+          </div>
+          <div class="design-content">
+            <div></div>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

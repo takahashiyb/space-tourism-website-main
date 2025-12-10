@@ -6,31 +6,4 @@ h2,
 h3,
 p {
   margin: 0;
-  line-height: 1.1;
-}
-
-h1 {
-  text-transform: uppercase;
-
-  // @include u.fs-typography-switching(
-  //   "text-preset-3-bold",
-  //   "text-preset-3-bold"
-  // );
-}
-
-h2 {
-  // @include u.fs-typography-switching("text-preset-2", "text-preset-1");
-}
-
-p {
-  color: var(--gray-500);
-
-  // @include u.fs-typography-switching(
-  //   "text-preset-3-medium",
-  //   "text-preset-3-medium"
-  // );
-}
-
-a {
-  // @include u.fs-typography-switching("text-preset-4", "text-preset-4");
 }

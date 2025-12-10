@@ -1,0 +1,140 @@
+@use "../util/" as u;
+
+.background {
+  position: relative;
+  overflow: hidden;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../../assets/crew/background-crew-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  transform: rotate(180deg);
+  z-index: -1;
+
+  background-color: hsl(var(--blue-900));
+}
+
+.design-content {
+  column-count: 2;
+  column-fill: balance;
+  gap: 60px;
+  > * {
+    break-inside: avoid; /* keep whole item in one column */
+    page-break-inside: avoid; /* older browsers */
+    -webkit-column-break-inside: avoid; /* Safari/Chrome legacy */
+  }
+}
+
+.flex__title {
+  align-items: center;
+
+  > * {
+    @include u.fs-typography-static("text-preset-5");
+  }
+
+  span {
+    color: hsl(var(--white), 0.5);
+    font-weight: 700;
+  }
+}
+
+.property-title {
+  color: hsl(var(--blue-300));
+  padding-bottom: var(--spacing-0300);
+
+  * {
+    @include u.fs-typography-static("text-preset-9");
+  }
+
+  h3 {
+    font-weight: 700;
+  }
+}
+
+.color-display {
+  height: 160px;
+  padding: var(--spacing-0300);
+  place-content: end;
+  border: hsl(var(--white)) solid 1px;
+
+  @include u.fs-typography-static("text-preset-6");
+}
+
+.color-detail {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  justify-items: start;
+  padding-top: var(--spacing-0300);
+  @include u.fs-typography-static("text-preset-9");
+}
+
+.property-label {
+  color: hsl(var(--blue-300));
+}
+
+hr {
+  color: hsl(var(--white), 0.15);
+  border: solid;
+}
+
+.light {
+  --color-theme: var(--black);
+
+  color: hsl(var(--color-theme));
+}
+
+.dark {
+  color: hsl(var(--color-theme));
+}
+
+.transparent {
+  color: hsl(var(--color-theme), 0.5);
+}
+
+.typography-display {
+  padding-top: var(--spacing-0300);
+  padding-bottom: var(--spacing-0900);
+}
+
+.text-preset-1 {
+  @include u.fs-typography-static("text-preset-1");
+}
+.text-preset-2 {
+  @include u.fs-typography-static("text-preset-2");
+}
+.text-preset-3 {
+  @include u.fs-typography-static("text-preset-3");
+}
+.text-preset-4 {
+  @include u.fs-typography-static("text-preset-4");
+}
+.text-preset-5 {
+  @include u.fs-typography-static("text-preset-5");
+}
+.text-preset-6 {
+  @include u.fs-typography-static("text-preset-6");
+}
+.text-preset-7 {
+  @include u.fs-typography-static("text-preset-7");
+}
+.text-preset-8 {
+  @include u.fs-typography-static("text-preset-8");
+}
+.text-preset-9 {
+  @include u.fs-typography-static("text-preset-9");
+}
+
+.design-content-spacing {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--spacing-0400);
+}
+
+.spacing-display {
+  background-color: hsl(var(--blue-300));
+  height: 42px;
+}

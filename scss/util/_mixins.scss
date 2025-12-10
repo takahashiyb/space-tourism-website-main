@@ -16,6 +16,16 @@
   );
 }
 
+@mixin fs-typography-static($preset) {
+  $mapped: map.get(t.$typographies, $preset);
+
+  font-size: map.get($mapped, font-size);
+  font-family: map.get($mapped, font-family);
+  font-weight: map.get($mapped, font-weight);
+  line-height: map.get($mapped, line-height);
+  letter-spacing: map.get($mapped, letter-spacing);
+}
+
 @mixin fs-typography-switching($small-preset, $large-preset) {
   $map-small: map.get(t.$typographies, $small-preset);
   $map-large: map.get(t.$typographies, $large-preset);

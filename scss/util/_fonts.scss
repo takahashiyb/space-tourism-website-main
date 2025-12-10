@@ -1,53 +1,79 @@
 @use "functions" as f;
 
-$font1: "League Spartan", sans-serif;
+$font-bellefair: "Bellefair", serif;
+
+$font-barlow: "Barlow Condensed", sans-serif;
 
 $typographies: (
   "text-preset-1": (
-    "font-family": $font1,
-    "font-weight": 600,
-    "font-size": f.rem(48),
-    "line-height": 0.9,
+    "font-family": $font-bellefair,
+    "font-weight": 400,
+    "font-size": f.rem(144),
+    "line-height": 1.719,
     "letter-spacing": f.em(0),
   ),
 
   "text-preset-2": (
-    "font-family": $font1,
-    "font-weight": 600,
-    "font-size": f.rem(40),
-    "line-height": 1,
+    "font-family": $font-bellefair,
+    "font-weight": 400,
+    "font-size": f.rem(100),
+    "line-height": 1.146,
     "letter-spacing": f.em(0),
   ),
 
-  "text-preset-3-bold": (
-    "font-family": $font1,
-    "font-weight": 700,
-    "font-size": f.rem(16),
-    "line-height": 1.4,
-    "letter-spacing": f.em(7),
-  ),
-
-  "text-preset-3-semibold": (
-    "font-family": $font1,
-    "font-weight": 600,
-    "font-size": f.rem(16),
-    "line-height": 1,
-    "letter-spacing": f.em(-0.7),
-  ),
-
-  "text-preset-3-medium": (
-    "font-family": $font1,
-    "font-weight": 500,
-    "font-size": f.rem(16),
-    "line-height": 1.4,
-    "letter-spacing": f.em(-0.5),
+  "text-preset-3": (
+    "font-family": $font-bellefair,
+    "font-weight": 400,
+    "font-size": f.rem(56),
+    "line-height": 0.642,
+    "letter-spacing": f.em(0),
   ),
 
   "text-preset-4": (
-    "font-family": $font1,
-    "font-weight": 500,
-    "font-size": f.rem(15),
-    "line-height": 1,
-    "letter-spacing": f.em(12.5),
+    "font-family": $font-bellefair,
+    "font-weight": 400,
+    "font-size": f.rem(32),
+    "line-height": 0.367,
+    "letter-spacing": f.em(0),
+  ),
+
+  "text-preset-5": (
+    "font-family": $font-barlow,
+    "font-weight": 400,
+    "font-size": f.rem(28),
+    "line-height": 0.336,
+    "letter-spacing": f.em(4),
+  ),
+
+  "text-preset-6": (
+    "font-family": $font-bellefair,
+    "font-weight": 400,
+    "font-size": f.rem(28),
+    "line-height": 1.321,
+    "letter-spacing": f.em(0),
+  ),
+
+  "text-preset-7": (
+    "font-family": $font-barlow,
+    "font-weight": 400,
+    "font-size": f.rem(14),
+    "line-height": 0.168,
+    "letter-spacing": f.em(2),
+  ),
+
+  "text-preset-8": (
+    "font-family": $font-barlow,
+    "font-weight": 400,
+    "font-size": f.rem(16),
+    "line-height": 0.192,
+    "letter-spacing": f.em(2),
+  ),
+
+  "text-preset-9": (
+    "font-family": $font-barlow,
+    "font-weight": 400,
+    "font-size": f.rem(18),
+    "line-height": 1.8,
+    "letter-spacing": f.em(0),
   ),
 );

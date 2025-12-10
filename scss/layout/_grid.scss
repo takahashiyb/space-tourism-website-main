@@ -1,6 +1,6 @@
-.grid {
-  --space-lr: 40px;
-  --space-gap: 20px;
+.grid-columns {
+  --space-lr: 165px;
+  --space-gap: 0px;
   --col-count: 1;
 
   display: grid;
@@ -18,4 +18,8 @@
     1fr;
 
   gap: var(--space-gap);
+
+  &__colors {
+    --col-count: 2;
+  }
 }
