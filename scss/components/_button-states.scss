@@ -1,0 +1,56 @@
+@use "../util/" as u;
+
+.container__large-button {
+  --button-size: 144px;
+
+  height: calc(var(--button-size) + 88px);
+  aspect-ratio: 1;
+
+  display: grid;
+  place-content: center;
+
+  @include u.breakpoint(medium) {
+    --button-size: 272px;
+  }
+}
+
+.large-button {
+  // be: border-effect
+  --be-transparency: 0;
+  --be-scale: 0;
+
+  height: var(--button-size);
+  aspect-ratio: 1;
+  background-color: hsl(var(--white));
+
+  position: relative;
+  display: grid;
+  place-content: center;
+
+  border-radius: 50%;
+}
+
+.large-button::after {
+  content: "";
+  height: calc(var(--button-size) + 88px);
+  aspect-ratio: 1;
+  background-color: hsl(var(--white));
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  transform: scale(var(--be-scale));
+  opacity: var(--be-transparency);
+
+  border-radius: 50%;
+  z-index: -1;
+
+  transition: transform 100ms ease-in, opacity 500ms ease-in-out;
+}
+
+.large-button:hover,
+.large-button:focus {
+  --be-transparency: 0.5;
+  --be-scale: 1;
+}
