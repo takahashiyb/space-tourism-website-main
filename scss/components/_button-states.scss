@@ -55,8 +55,13 @@
 }
 
 .large-button:hover,
-.large-button:focus {
+.large-button:focus-visible {
   --be-transparency: 0.5;
   --be-color-transparency: 0.5;
   --be-scale: 1;
+}
+
+.large-button:active {
+  --be-transparency: 1;
+  --be-color-transparency: 0.2;
 }
