@@ -1,12 +1,16 @@
+@use "../util/" as u;
+
 .grid-columns {
-  --space-lr: 165px;
-  --space-gap: 0px;
-  --col-count: 1;
+  --space-lr: var(--spacing-0300);
+  --pad: 1fr;
+  --space-gap: var(--spacing-0200);
+  --col-count: 4;
 
   display: grid;
+  align-items: center;
 
   grid-template-columns:
-    1fr repeat(
+    var(--pad) repeat(
       var(--col-count),
       calc(
         (
@@ -15,11 +19,25 @@
           ) / var(--col-count)
       )
     )
-    1fr;
+    var(--pad);
 
   gap: var(--space-gap);
 
-  &__colors {
-    --col-count: 2;
+  @include u.breakpoint(medium) {
+    --space-lr: var(--spacing-0500);
+    --pad: 1fr;
+    --space-gap: var(--spacing-0200);
+    --col-count: 8;
+  }
+
+  @include u.breakpoint(large) {
+    --space-lr: var(--spacing-2000);
+    --pad: 1fr;
+    --space-gap: var(--spacing-0400);
+    --col-count: 12;
+  }
+
+  &__header > * {
+    grid-row: 1;
   }
 }
