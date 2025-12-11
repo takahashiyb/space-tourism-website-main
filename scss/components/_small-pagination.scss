@@ -1,0 +1,36 @@
+@use "../util/" as u;
+
+.ul__small-pagination {
+  display: flex;
+  gap: var(--spacing-0700);
+
+  list-style-type: none;
+}
+
+.li__small-pagination {
+  --page-size: 10px;
+  --page-transparency: 0.17;
+
+  display: inline-block;
+  height: var(--page-size);
+  aspect-ratio: 1;
+  background-color: hsl(var(--white), var(--page-transparency));
+  cursor: pointer;
+
+  border-radius: 50%;
+
+  @include u.breakpoint(large) {
+    --page-size: 15px;
+  }
+
+  &:hover,
+  &:focus {
+    --page-transparency: 0.5;
+  }
+
+  &--selected,
+  &--selected:hover,
+  &--selected:focus {
+    --page-transparency: 1;
+  }
+}
