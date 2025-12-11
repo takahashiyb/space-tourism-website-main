@@ -11,17 +11,22 @@
 
   @include u.breakpoint(medium) {
     --button-size: 272px;
+
+    @include u.fs-typography-static("text-preset-4");
   }
 }
 
 .large-button {
   // be: border-effect
   --be-transparency: 0;
-  --be-scale: 0;
+  --be-color-transparency: 1;
 
   height: var(--button-size);
   aspect-ratio: 1;
   background-color: hsl(var(--white));
+
+  color: hsl(var(--blue-900), var(--be-color-transparency));
+  text-decoration: none;
 
   position: relative;
   display: grid;
@@ -52,5 +57,6 @@
 .large-button:hover,
 .large-button:focus {
   --be-transparency: 0.5;
+  --be-color-transparency: 0.5;
   --be-scale: 1;
 }
