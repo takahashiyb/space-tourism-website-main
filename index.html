@@ -11,7 +11,40 @@
       href="./assets/favicon-32x32.png"
     />
 
+    <link rel="stylesheet" href="./dist/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Frontend Mentor | Space tourism website</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="grid-columns grid-columns__header group-header">
+        <div class="header__logo">
+          <img src="./assets/shared/logo.svg" alt="" />
+          <hr class="header__line" />
+        </div>
+
+        <div class="header__square"></div>
+
+        <nav class="header__nav">
+          <ul class="nav-list">
+            <li class="nav-option"><span>00</span> HOME</li>
+            <li class="nav-option"><span>01</span> DESTINATION</li>
+            <li class="nav-option"><span>02</span> CREW</li>
+            <li class="nav-option"><span>03</span> TECHNOLOGY</li>
+          </ul>
+        </nav>
+
+        <button class="header__menu">
+          <img src="./assets/shared/icon-hamburger.svg" alt="" />
+        </button>
+      </div>
+    </header>
+  </body>
 </html>
