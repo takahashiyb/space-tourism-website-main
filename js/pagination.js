@@ -15,10 +15,10 @@ export function addPaginationFunction() {
     list.forEach((link) => {
       link.addEventListener("click", function () {
         nav.list.forEach((element) => {
-          element.classList.remove("li__small-pagination--selected");
+          element.classList.remove("pagination--selected");
           element.setAttribute("aria-selected", "false");
         });
-        this.classList.add("li__small-pagination--selected");
+        this.classList.add("pagination--selected");
         this.setAttribute("aria-selected", "true");
       });
     });

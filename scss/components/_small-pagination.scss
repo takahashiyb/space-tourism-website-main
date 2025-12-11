@@ -27,10 +27,10 @@
   &:focus {
     --page-transparency: 0.5;
   }
+}
 
-  &--selected,
-  &--selected:hover,
-  &--selected:focus {
-    --page-transparency: 1;
-  }
+.pagination--selected,
+.pagination--selected:hover,
+.pagination--selected:focus {
+  --page-transparency: 1;
 }
