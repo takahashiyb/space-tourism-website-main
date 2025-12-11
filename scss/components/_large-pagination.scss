@@ -1,0 +1,47 @@
+@use "../util/" as u;
+
+.ul__large-pagination {
+  display: flex;
+  gap: var(--spacing-0700);
+
+  list-style-type: none;
+}
+
+.li__large-pagination {
+  --page-size: var(--spacing-0700);
+  --page-color: var(--white);
+  --page-transparency: 0;
+  --page-border-transparency: 0.5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--page-size);
+  aspect-ratio: 1;
+  background-color: hsl(var(--white), var(--page-transparency));
+  @include u.fs-typography-static("text-preset-4");
+  text-decoration: none;
+  color: hsl(var(--page-color));
+  cursor: pointer;
+
+  border: solid hsl(var(--white), var(--page-border-transparency));
+  border-radius: 50%;
+
+  @include u.breakpoint(large) {
+    --page-size: var(--spacing-1000);
+  }
+
+  &:hover,
+  &:focus {
+    --page-transparency: 0.5;
+    --page-border-transparency: 1;
+  }
+}
+
+.pagination--selected,
+.pagination--selected:hover,
+.pagination--selected:focus {
+  --page-transparency: 1;
+  --page-border-transparency: 1;
+  --page-color: var(--black);
+}
