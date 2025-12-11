@@ -24,13 +24,13 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     --page-transparency: 0.5;
   }
 }
 
 .pagination--selected,
 .pagination--selected:hover,
-.pagination--selected:focus {
+.pagination--selected:focus-visible {
   --page-transparency: 1;
 }

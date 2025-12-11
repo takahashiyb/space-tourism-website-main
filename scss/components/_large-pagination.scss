@@ -32,7 +32,7 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     --page-transparency: 0.5;
     --page-border-transparency: 1;
   }
@@ -40,7 +40,7 @@
 
 .pagination--selected,
 .pagination--selected:hover,
-.pagination--selected:focus {
+.pagination--selected:focus-visible {
   --page-transparency: 1;
   --page-border-transparency: 1;
   --page-color: var(--black);
