@@ -20,7 +20,7 @@
   }
 
   &__section {
-    --padding-top-bottom: #{u.em(72)};
+    --padding-top-bottom: #{u.em(0)};
     gap: var(--spacing-0600);
   }
 
@@ -30,5 +30,13 @@
     flex-direction: row;
     gap: var(--spacing-0300);
     align-items: center;
+  }
+
+  &__homepage-text {
+    gap: var(--spacing-0300);
+
+    @include u.breakpoint(large) {
+      padding: var(--spacing-0000);
+    }
   }
 }

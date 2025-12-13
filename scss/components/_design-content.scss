@@ -1,24 +1,5 @@
 @use "../util/" as u;
 
-.background {
-  position: relative;
-  overflow: hidden;
-}
-
-.background::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("../../assets/crew/background-crew-desktop.jpg");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: contain;
-  transform: rotate(180deg);
-  z-index: -1;
-
-  background-color: hsl(var(--blue-900));
-}
-
 .design-content {
   column-count: 1;
   column-fill: balance;

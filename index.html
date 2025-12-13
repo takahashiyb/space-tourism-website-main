@@ -23,28 +23,57 @@
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body>
-    <header>
-      <div class="grid-columns grid-columns__header group-header">
-        <div class="header__logo">
-          <img src="./assets/shared/logo.svg" alt="" />
-          <hr class="header__line" />
+    <div class="background background__homepage">
+      <header>
+        <div class="grid-columns grid-columns__header group-header">
+          <div class="header__logo">
+            <img src="./assets/shared/logo.svg" alt="" />
+            <hr class="header__line" />
+          </div>
+
+          <div class="header__square"></div>
+
+          <nav class="header__nav">
+            <ul class="nav-list">
+              <li class="nav-option"><span>00</span> HOME</li>
+              <li class="nav-option"><span>01</span> DESTINATION</li>
+              <li class="nav-option"><span>02</span> CREW</li>
+              <li class="nav-option"><span>03</span> TECHNOLOGY</li>
+            </ul>
+          </nav>
+
+          <button class="header__menu">
+            <img src="./assets/shared/icon-hamburger.svg" alt="" />
+          </button>
         </div>
-
-        <div class="header__square"></div>
-
-        <nav class="header__nav">
-          <ul class="nav-list">
-            <li class="nav-option"><span>00</span> HOME</li>
-            <li class="nav-option"><span>01</span> DESTINATION</li>
-            <li class="nav-option"><span>02</span> CREW</li>
-            <li class="nav-option"><span>03</span> TECHNOLOGY</li>
-          </ul>
-        </nav>
-
-        <button class="header__menu">
-          <img src="./assets/shared/icon-hamburger.svg" alt="" />
-        </button>
-      </div>
-    </header>
+      </header>
+      <main class="main__homepage">
+        <div class="grid-columns grid-columns__homepage">
+          <section class="homepage-text-section">
+            <div class="flex flex__homepage-text">
+              <p class="title-framing">So, you want to travel to</p>
+              <h1>Space</h1>
+              <p>
+                Let’s face it; if you want to go to space, you might as well
+                genuinely go to outer space and not hover kind of on the edge of
+                it. Well sit back, and relax because we’ll give you a truly out
+                of this world experience!
+              </p>
+            </div>
+          </section>
+          <section class="components-button">
+            <div class="flex flex__section">
+              <div class="design-content">
+                <div style="column-span: all">
+                  <div class="container__large-button">
+                    <a class="large-button" href="#EXPLORE">EXPLORE</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

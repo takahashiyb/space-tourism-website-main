@@ -1,16 +1,16 @@
 @use "../util/" as u;
 
 .container__large-button {
-  --button-size: 144px;
+  --button-size: #{u.rem(144)};
 
-  height: calc(var(--button-size) + 88px);
+  height: calc(var(--button-size) + #{u.rem(88)});
   aspect-ratio: 1;
 
   display: grid;
   place-content: center;
 
   @include u.breakpoint(medium) {
-    --button-size: 272px;
+    --button-size: #{u.rem(272)};
 
     @include u.fs-typography-static("text-preset-4");
   }
@@ -37,7 +37,7 @@
 
 .large-button::after {
   content: "";
-  height: calc(var(--button-size) + 88px);
+  height: calc(var(--button-size) + #{u.rem(88)});
   aspect-ratio: 1;
   background-color: hsl(var(--white));
 

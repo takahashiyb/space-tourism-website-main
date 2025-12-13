@@ -1,0 +1,39 @@
+@use "../util/" as u;
+
+.main__homepage {
+  flex: 1;
+  align-content: center;
+
+  @include u.breakpoint(large) {
+    align-content: flex-end;
+    padding: var(--spacing-2000);
+  }
+}
+
+.homepage-text-section {
+  grid-column: 2/-2;
+  text-align: center;
+  justify-self: center;
+
+  @include u.breakpoint(medium) {
+    grid-column: 3/-3;
+  }
+
+  @include u.breakpoint(large) {
+    grid-column: 2/8;
+    text-align: start;
+    justify-self: start;
+  }
+}
+.components-button {
+  grid-column: 2/-2;
+  justify-self: center;
+
+  @include u.breakpoint(medium) {
+    grid-column: 3/-3;
+  }
+
+  @include u.breakpoint(large) {
+    grid-column: 11/-2;
+  }
+}

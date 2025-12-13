@@ -42,7 +42,7 @@
   @include u.breakpoint(medium) {
     background-color: hsl(var(--white), 0.1);
     height: 100%;
-    // width: 100%;
+    padding: var(--spacing-0400) 0;
     grid-column: 3/-1;
   }
 

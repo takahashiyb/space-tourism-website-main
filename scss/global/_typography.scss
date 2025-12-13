@@ -7,3 +7,32 @@ h3,
 p {
   margin: 0;
 }
+
+h1 {
+  @include u.fs-typography-static("text-preset-1");
+  font-size: u.rem(80);
+  text-transform: uppercase;
+
+  @include u.breakpoint(medium) {
+    @include u.fs-typography-static("text-preset-1");
+  }
+}
+
+p {
+  @include u.fs-typography-static("text-preset-9");
+  font-size: u.rem(15);
+
+  @include u.breakpoint(medium) {
+    @include u.fs-typography-static("text-preset-9");
+  }
+}
+
+.title-framing {
+  @include u.fs-typography-static("text-preset-9");
+  font-size: u.rem(15);
+  text-transform: uppercase;
+
+  @include u.breakpoint(medium) {
+    @include u.fs-typography-static("text-preset-5");
+  }
+}
