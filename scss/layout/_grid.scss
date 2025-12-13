@@ -37,7 +37,17 @@
     --col-count: 12;
   }
 
-  &__header > * {
-    grid-row: 1;
+  &__header {
+    padding-top: var(--spacing-0300);
+    padding-bottom: var(--spacing-0300);
+
+    > * {
+      grid-row: 1;
+    }
+  }
+
+  &__homepage {
+    justify-items: center;
+    height: 100%;
   }
 }
