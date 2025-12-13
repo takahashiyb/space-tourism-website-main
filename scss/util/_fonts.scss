@@ -2,7 +2,9 @@
 
 $font-bellefair: "Bellefair", serif;
 
-$font-barlow: "Barlow Condensed", sans-serif;
+$font-barlow-con: "Barlow Condensed", sans-serif;
+
+$font-barlow: "Barlow", sans-serif;
 
 $typographies: (
   "text-preset-1": (
@@ -38,7 +40,7 @@ $typographies: (
   ),
 
   "text-preset-5": (
-    "font-family": $font-barlow,
+    "font-family": $font-barlow-con,
     "font-weight": 400,
     "font-size": f.rem(28),
     "line-height": 1.2,
@@ -54,7 +56,7 @@ $typographies: (
   ),
 
   "text-preset-7": (
-    "font-family": $font-barlow,
+    "font-family": $font-barlow-con,
     "font-weight": 400,
     "font-size": f.rem(14),
     "line-height": 1.2,
@@ -62,7 +64,7 @@ $typographies: (
   ),
 
   "text-preset-8": (
-    "font-family": $font-barlow,
+    "font-family": $font-barlow-con,
     "font-weight": 400,
     "font-size": f.rem(16),
     "line-height": 1.2,

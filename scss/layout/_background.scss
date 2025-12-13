@@ -4,18 +4,16 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
   height: 100dvh;
 
-  &__design-system {
+  &__design-system::before {
     background-image: url("../../assets/crew/background-crew-desktop.jpg");
     transform: rotate(180deg);
-    background-position: top;
   }
 
   &__homepage::before {
     background-image: url("../../assets/home/background-home-mobile.jpg");
-    background-position: bottom;
 
     @include u.breakpoint(medium) {
       background-image: url("../../assets/home/background-home-tablet.jpg");
@@ -29,11 +27,11 @@
 
 .background::before {
   content: "";
-  position: absolute;
+  position: fixed;
   inset: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   z-index: -1;
-
   background-color: hsl(var(--blue-900));
 }

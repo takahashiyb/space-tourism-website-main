@@ -1,38 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+    <link rel="stylesheet" href="../dist/style.css" />
 
-  01 Pick your destination
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
 
-  Moon
-  Mars
-  Europa
-  Titan
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body>
+    <div class="background background__destinations">
+      <header>
+        <div class="grid-columns grid-columns__header group-header">
+          <div class="header__logo">
+            <img src="../assets/shared/logo.svg" alt="" />
+            <hr class="header__line" />
+          </div>
 
-  Europa
+          <div class="header__square"></div>
 
-  The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
-  winter lover’s dream. With an icy surface, it’s perfect for a bit of 
-  ice skating, curling, hockey, or simple relaxation in your snug 
-  wintery cabin.
+          <nav class="header__nav">
+            <ul class="nav-list">
+              <li class="nav-option"><span>00</span> HOME</li>
+              <li class="nav-option"><span>01</span> DESTINATION</li>
+              <li class="nav-option"><span>02</span> CREW</li>
+              <li class="nav-option"><span>03</span> TECHNOLOGY</li>
+            </ul>
+          </nav>
+          <button class="header__menu">
+            <img src="../assets/shared/icon-hamburger.svg" alt="" />
+          </button>
+        </div>
+      </header>
 
-  Avg. distance
-  628 mil. km
-
-  Est. travel time
-  3 years
-</body>
+      <main class="main__destinations">
+        <div class="grid-columns grid-columns__destinations">
+          <section class="title-framing-section">
+            <p class="title-framing__destinations">
+              <span>01</span>Pick your destination
+            </p>
+          </section>
+          <section class="destination-details">
+            <div class="container__destination-details">
+              <div class="container-image-destination">
+                <img
+                  class="image-destination"
+                  src="../assets/destination/image-europa.webp"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex__destination-details">
+                <div class="js-destinations-tab destinations-tab"></div>
+                <div class="destination-text">
+                  <h1 class="destination-title">Europa</h1>
+                  <p>
+                    The smallest of the four Galilean moons orbiting Jupiter,
+                    Europa is a winter lover’s dream. With an icy surface, it’s
+                    perfect for a bit of ice skating, curling, hockey, or simple
+                    relaxation in your snug wintery cabin.
+                  </p>
+                </div>
+                <hr class="line__destinations" />
+                <div class="destination-specs">
+                  <div class="destination-specs-entry">
+                    <h2>Avg. distance</h2>
+                    <h3>628 mil. km</h3>
+                  </div>
+                  <div class="destination-specs-entry">
+                    <h2>Est. travel time</h2>
+                    <h3>3 years</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="../js/index.js"></script>
+  </body>
 </html>

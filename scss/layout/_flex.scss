@@ -8,15 +8,15 @@
   flex-direction: column;
   padding: var(--padding-top-bottom) var(--padding-inline);
 
-  @include u.breakpoint(medium) {
-    --padding-inline: #{u.em(165)};
-  }
-
   &__header {
     --padding-top-bottom: #{u.em(64)};
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+
+    @include u.breakpoint(medium) {
+      --padding-inline: #{u.em(165)};
+    }
   }
 
   &__section {
@@ -34,9 +34,10 @@
 
   &__homepage-text {
     gap: var(--spacing-0300);
+  }
 
-    @include u.breakpoint(large) {
-      padding: var(--spacing-0000);
-    }
+  &__destination-details {
+    align-items: center;
+    gap: var(--spacing-0300);
   }
 }

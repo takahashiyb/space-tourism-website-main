@@ -18,6 +18,16 @@ h1 {
   }
 }
 
+h2 {
+  @include u.fs-typography-static("text-preset-7");
+  text-transform: uppercase;
+}
+
+h3 {
+  @include u.fs-typography-static("text-preset-6");
+  text-transform: uppercase;
+}
+
 p {
   @include u.fs-typography-static("text-preset-9");
   font-size: u.rem(15);
@@ -27,12 +37,67 @@ p {
   }
 }
 
-.title-framing {
+.title-framing__homepage {
   @include u.fs-typography-static("text-preset-9");
   font-size: u.rem(15);
   text-transform: uppercase;
 
   @include u.breakpoint(medium) {
     @include u.fs-typography-static("text-preset-5");
+  }
+}
+
+.destination-text {
+  text-align: center;
+
+  @include u.breakpoint(large) {
+    text-align: start;
+  }
+}
+
+.destination-title {
+  @include u.fs-typography-static("text-preset-2");
+  font-size: u.rem(56);
+  text-transform: uppercase;
+  text-align: center;
+
+  @include u.breakpoint(medium) {
+    @include u.fs-typography-static("text-preset-2");
+    font-size: u.rem(80);
+  }
+
+  @include u.breakpoint(large) {
+    @include u.fs-typography-static("text-preset-2");
+    text-align: start;
+  }
+}
+
+.destination-specs {
+  text-align: center;
+
+  @include u.breakpoint(large) {
+    text-align: start;
+  }
+}
+
+.title-framing__destinations {
+  @include u.fs-typography-static("text-preset-5");
+  font-size: u.rem(16);
+  text-transform: uppercase;
+
+  @include u.breakpoint(medium) {
+    @include u.fs-typography-static("text-preset-5");
+    font-size: u.rem(20);
+  }
+
+  @include u.breakpoint(large) {
+    @include u.fs-typography-static("text-preset-5");
+    text-align: start;
+  }
+
+  span {
+    font-weight: 700;
+    color: hsl(var(--white), 0.5);
+    margin-right: u.em(5);
   }
 }

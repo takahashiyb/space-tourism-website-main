@@ -2,7 +2,11 @@
 
 .tab-list {
   display: flex;
-  gap: var(--spacing-0500);
+  gap: clamp(
+    #{var(--spacing-0100)},
+    #{var(--spacing-0300)},
+    #{var(--spacing-0500)}
+  );
 
   list-style-type: none;
   padding-inline-start: 0;
