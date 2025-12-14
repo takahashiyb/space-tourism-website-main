@@ -33,6 +33,7 @@
   --transparency: 0.5;
 }
 
-.tab-option:active {
+.tab-option:active,
+.tab-option.selected {
   --transparency: 1;
 }
