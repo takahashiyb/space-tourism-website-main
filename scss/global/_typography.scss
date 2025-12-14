@@ -28,6 +28,12 @@ h3 {
   text-transform: uppercase;
 }
 
+a {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
 p {
   @include u.fs-typography-static("text-preset-9");
   font-size: u.rem(15);
