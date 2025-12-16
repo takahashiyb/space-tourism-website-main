@@ -1,5 +1,5 @@
-import { addPaginationFunction } from "./pagination.js";
+import { pagination } from "./pagination.js";
 import { loadDestinationTabs } from "./destinations-tab.js";
 
-addPaginationFunction();
 loadDestinationTabs();
+pagination("components-small-pagination", "crew");

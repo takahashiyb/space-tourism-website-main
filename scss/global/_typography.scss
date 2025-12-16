@@ -37,6 +37,7 @@ a {
 p {
   @include u.fs-typography-static("text-preset-9");
   font-size: u.rem(15);
+  color: hsl(var(--blue-300));
 
   @include u.breakpoint(medium) {
     @include u.fs-typography-static("text-preset-9");
@@ -50,6 +51,28 @@ p {
 
   @include u.breakpoint(medium) {
     @include u.fs-typography-static("text-preset-5");
+  }
+}
+
+.title-framing {
+  @include u.fs-typography-static("text-preset-5");
+  font-size: u.rem(16);
+  text-transform: uppercase;
+
+  @include u.breakpoint(medium) {
+    @include u.fs-typography-static("text-preset-5");
+    font-size: u.rem(20);
+  }
+
+  @include u.breakpoint(large) {
+    @include u.fs-typography-static("text-preset-5");
+    text-align: start;
+  }
+
+  span {
+    font-weight: 700;
+    color: hsl(var(--white), 0.5);
+    margin-right: u.em(5);
   }
 }
 
@@ -86,24 +109,43 @@ p {
   }
 }
 
-.title-framing__destinations {
-  @include u.fs-typography-static("text-preset-5");
-  font-size: u.rem(16);
+.crew-title {
+  @include u.fs-typography-static("text-preset-4");
+  font-size: u.rem(18);
   text-transform: uppercase;
+  color: hsl(var(--white), 0.5);
+  text-align: center;
 
   @include u.breakpoint(medium) {
-    @include u.fs-typography-static("text-preset-5");
-    font-size: u.rem(20);
+    font-size: u.rem(24);
   }
 
   @include u.breakpoint(large) {
-    @include u.fs-typography-static("text-preset-5");
+    @include u.fs-typography-static("text-preset-4");
     text-align: start;
   }
+}
 
-  span {
-    font-weight: 700;
-    color: hsl(var(--white), 0.5);
-    margin-right: u.em(5);
+.crew-name {
+  @include u.fs-typography-static("text-preset-3");
+  font-size: u.rem(24);
+  text-transform: uppercase;
+  text-align: center;
+
+  @include u.breakpoint(medium) {
+    font-size: u.rem(40);
+  }
+
+  @include u.breakpoint(large) {
+    @include u.fs-typography-static("text-preset-3");
+    text-align: start;
+  }
+}
+
+.crew-text {
+  text-align: center;
+
+  @include u.breakpoint(large) {
+    text-align: start;
   }
 }

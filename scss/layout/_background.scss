@@ -25,6 +25,12 @@
     --bg-img-m: url("../../assets/destination/background-destination-tablet.jpg");
     --bg-img-l: url("../../assets/destination/background-destination-desktop.jpg");
   }
+
+  &__crew::before {
+    --bg-img-s: url("../../assets/crew/background-crew-mobile.jpg");
+    --bg-img-m: url("../../assets/crew/background-crew-tablet.jpg");
+    --bg-img-l: url("../../assets/crew/background-crew-desktop.jpg");
+  }
 }
 
 .background::before {

@@ -36,7 +36,8 @@
     gap: var(--spacing-0300);
   }
 
-  &__destination-details {
+  &__destination-details,
+  &__crew-details {
     align-items: center;
     gap: var(--spacing-0300);
   }

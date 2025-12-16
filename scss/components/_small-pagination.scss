@@ -2,9 +2,9 @@
 
 .ul__small-pagination {
   display: flex;
-  gap: var(--spacing-0700);
-
+  gap: var(--spacing-0300);
   list-style-type: none;
+  padding: 0;
 }
 
 .li__small-pagination {

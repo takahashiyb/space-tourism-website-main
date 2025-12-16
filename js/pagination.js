@@ -1,5 +1,8 @@
-export function addPaginationFunction() {
-  const navPagination = document.querySelectorAll(".js-pagination");
+import { getJson } from "./util.js";
+
+export function addPaginationFunction(section) {
+  const pagination = document.querySelector(section);
+  const navPagination = pagination.querySelectorAll(".js-pagination");
 
   let navPaginationList = [];
 
@@ -21,6 +24,66 @@ export function addPaginationFunction() {
         this.classList.add("pagination--selected");
         this.setAttribute("aria-selected", "true");
       });
+    });
+  });
+}
+
+export async function pagination(paginationType, data) {
+  const section = document.querySelector(`.${paginationType}.${data}`);
+
+  if (!section) {
+    return;
+  }
+
+  const json = await getJson;
+
+  const list = json.json[data];
+
+  const type = paginationType.replace("components-", "");
+
+  let listHtml = "";
+
+  list.forEach((item, index) => {
+    listHtml += `<li><a class="li__${type} js-pagination-link ${
+      index === 0 ? "pagination--selected" : "" //for now, always set to 0
+    }" href="#page${
+      index + 1
+    }" data-index="${item.name.toLowerCase()}"></a></li>`;
+  });
+
+  section.innerHTML = `
+  <div class="design-content">
+    <div style="column-span: all">
+      <nav
+        class="js-pagination"
+        aria-label="pagination"
+        data-pagination="1"
+      >
+        <ul class="ul__${type}">
+          ${listHtml}
+        </ul>
+      </nav>
+    </div>
+  </div>
+  `;
+
+  addPaginationFunction(`.${paginationType}.${data}`);
+
+  const listPagination = section.querySelectorAll(`.li__${type}`);
+  listPagination.forEach((item) => {
+    item.addEventListener("click", function () {
+      const pullData = item.dataset.index;
+      const object = list.find((item) => item.name.toLowerCase() === pullData);
+
+      const title = document.querySelector(".crew-title");
+      const name = document.querySelector(".crew-name");
+      const description = document.querySelector(".crew-text p");
+      const image = document.querySelector(".js-image-crew");
+
+      title.textContent = object.role;
+      name.textContent = object.name;
+      description.textContent = object.bio;
+      image.src = `.${object.images.webp}`;
     });
   });
 }
