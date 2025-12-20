@@ -2,6 +2,7 @@
 
 .main__crew {
   flex: 1;
+  align-self: center;
 }
 
 .title-framing-section {
@@ -72,10 +73,12 @@
 
   height: 100%;
   width: 100%;
+  display: grid;
 
   @include u.breakpoint(large) {
     grid-column: 8/-2;
     grid-row: 1/-1;
+    place-content: end center;
   }
 }
 

@@ -2,7 +2,7 @@
 
 .main__homepage {
   flex: 1;
-  align-content: center;
+  align-content: flex-end;
 
   @include u.breakpoint(large) {
     align-content: flex-end;
