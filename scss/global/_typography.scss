@@ -109,7 +109,8 @@ p {
   }
 }
 
-.crew-title {
+.crew-title,
+.technology-title p {
   @include u.fs-typography-static("text-preset-4");
   font-size: u.rem(18);
   text-transform: uppercase;
@@ -126,7 +127,8 @@ p {
   }
 }
 
-.crew-name {
+.crew-name,
+.technology-name {
   @include u.fs-typography-static("text-preset-3");
   font-size: u.rem(24);
   text-transform: uppercase;
@@ -142,7 +144,8 @@ p {
   }
 }
 
-.crew-text {
+.crew-text,
+.technology-text {
   text-align: center;
 
   @include u.breakpoint(large) {

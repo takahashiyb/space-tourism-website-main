@@ -46,9 +46,9 @@ export async function pagination(paginationType, data) {
   list.forEach((item, index) => {
     listHtml += `<li><a class="li__${type} js-pagination-link ${
       index === 0 ? "pagination--selected" : "" //for now, always set to 0
-    }" href="#page${
-      index + 1
-    }" data-index="${item.name.toLowerCase()}"></a></li>`;
+    }" href="#page${index + 1}" data-index="${item.name.toLowerCase()}">${
+      type === "large-pagination" ? index + 1 : ""
+    }</a></li>`;
   });
 
   section.innerHTML = `
@@ -72,18 +72,42 @@ export async function pagination(paginationType, data) {
   const listPagination = section.querySelectorAll(`.li__${type}`);
   listPagination.forEach((item) => {
     item.addEventListener("click", function () {
-      const pullData = item.dataset.index;
-      const object = list.find((item) => item.name.toLowerCase() === pullData);
-
-      const title = document.querySelector(".crew-title");
-      const name = document.querySelector(".crew-name");
-      const description = document.querySelector(".crew-text p");
-      const image = document.querySelector(".js-image-crew");
-
-      title.textContent = object.role;
-      name.textContent = object.name;
-      description.textContent = object.bio;
-      image.src = `.${object.images.webp}`;
+      if (data === "crew") {
+        displayChangeCrew(item, list);
+      }
+      if (data === "technology") {
+        displayChangeTechnology(item, list);
+      }
     });
   });
+}
+
+function displayChangeCrew(item, list) {
+  const pullData = item.dataset.index;
+  const object = list.find((item) => item.name.toLowerCase() === pullData);
+
+  const title = document.querySelector(".crew-title");
+  const name = document.querySelector(".crew-name");
+  const description = document.querySelector(".crew-text p");
+  const image = document.querySelector(".js-image-crew");
+
+  title.textContent = object.role;
+  name.textContent = object.name;
+  description.textContent = object.bio;
+  image.src = `.${object.images.webp}`;
+}
+
+function displayChangeTechnology(item, list) {
+  const pullData = item.dataset.index;
+  const object = list.find((item) => item.name.toLowerCase() === pullData);
+
+  const name = document.querySelector(".technology-name");
+  const description = document.querySelector(".technology-text p");
+  const small = document.querySelector(".js-image-small-technology");
+  const large = document.querySelector(".js-image-large-technology");
+
+  name.textContent = object.name;
+  description.textContent = object.description;
+  small.src = `.${object.images.landscape}`;
+  large.srcset = `.${object.images.portrait}`;
 }

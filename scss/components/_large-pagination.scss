@@ -2,9 +2,12 @@
 
 .ul__large-pagination {
   display: flex;
-  gap: var(--spacing-0700);
+  gap: var(--spacing-0100);
+  justify-content: center;
 
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .li__large-pagination {

@@ -1,0 +1,72 @@
+@use "../util/" as u;
+
+.technology-details {
+  grid-column: 1/-1;
+}
+
+.container__technology-details {
+  display: grid;
+  gap: var(--spacing-0300);
+}
+
+.container__image-technology {
+  grid-column: 1/-1;
+
+  min-height: 0;
+  max-height: 300px;
+  height: 100%;
+  align-self: flex-end;
+
+  @include u.breakpoint(large) {
+    grid-column: 9/-1;
+    grid-row: 1;
+    max-height: 550px;
+    aspect-ratio: 1;
+  }
+}
+
+.image-technology {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.container__technology-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: var(--spacing-0400);
+  grid-column: 2/-2;
+  align-items: center;
+
+  @include u.breakpoint(medium) {
+    grid-column: 3/-3;
+  }
+
+  @include u.breakpoint(large) {
+    grid-column: 2/9;
+    grid-row: 1;
+    flex-direction: row;
+  }
+}
+
+.technology-text,
+.technology-title {
+  grid-column: 2/-2;
+}
+
+.technology-text {
+  grid-column: 1/-1;
+}
+
+.technology-title {
+  display: grid;
+  gap: var(--spacing-0200);
+}
+
+.ul__large-pagination {
+  @include u.breakpoint(large) {
+    flex-direction: column;
+  }
+}

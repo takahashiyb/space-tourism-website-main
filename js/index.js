@@ -3,3 +3,4 @@ import { loadDestinationTabs } from "./destinations-tab.js";
 
 loadDestinationTabs();
 pagination("components-small-pagination", "crew");
+pagination("components-large-pagination", "technology");
