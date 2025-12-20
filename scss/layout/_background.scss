@@ -31,6 +31,12 @@
     --bg-img-m: url("../../assets/crew/background-crew-tablet.jpg");
     --bg-img-l: url("../../assets/crew/background-crew-desktop.jpg");
   }
+
+  &__technology::before {
+    --bg-img-s: url("../../assets/technology/background-technology-mobile.jpg");
+    --bg-img-m: url("../../assets/technology/background-technology-tablet.jpg");
+    --bg-img-l: url("../../assets/technology/background-technology-desktop.jpg");
+  }
 }
 
 .background::before {
