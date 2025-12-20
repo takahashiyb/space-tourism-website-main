@@ -48,6 +48,8 @@
 
   &__crew {
     height: 100%;
+    align-content: center;
+    grid-template-rows: auto auto auto;
 
     @include u.breakpoint(large) {
       grid-template-rows: 1fr min-content;
