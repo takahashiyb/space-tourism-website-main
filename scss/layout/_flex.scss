@@ -39,6 +39,15 @@
   &__destination-details,
   &__crew-details {
     align-items: center;
+    gap: auto;
+    // var(--spacing-0300)
+  }
+
+  &__crew {
+    --padding-inline: #{u.em(0)};
     gap: var(--spacing-0300);
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: var(--spacing-0400);
   }
 }
