@@ -46,13 +46,7 @@
     }
   }
 
-  &__destinations {
-    height: 100%;
-  }
-
   &__crew {
-    height: 100%;
-
     @include u.breakpoint(large) {
       grid-template-rows: 1fr min-content;
       padding-bottom: var(--spacing-0600);

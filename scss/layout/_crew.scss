@@ -1,8 +1,7 @@
 @use "../util/" as u;
 
 .main__crew {
-  flex-grow: 1;
-  align-content: stretch;
+  flex: 1;
 }
 
 .title-framing-section {

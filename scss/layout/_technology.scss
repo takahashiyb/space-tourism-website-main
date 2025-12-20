@@ -1,5 +1,9 @@
 @use "../util/" as u;
 
+.main__technology {
+  flex: 1;
+}
+
 .technology-details {
   grid-column: 1/-1;
 }
@@ -7,6 +11,7 @@
 .container__technology-details {
   display: grid;
   gap: var(--spacing-0300);
+  align-items: flex-end;
 }
 
 .container__image-technology {
@@ -15,7 +20,6 @@
   min-height: 0;
   max-height: 300px;
   height: 100%;
-  align-self: flex-end;
 
   @include u.breakpoint(large) {
     grid-column: 9/-1;
