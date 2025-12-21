@@ -36,7 +36,8 @@ picture {
   margin: 0;
 }
 
-ul {
+ul,
+dialog {
   margin: 0;
   padding: 0;
 }
@@ -54,6 +55,12 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 /* remove animations for people who've turned them off */

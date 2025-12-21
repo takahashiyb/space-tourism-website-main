@@ -36,6 +36,7 @@
 
 .components-small-pagination.crew {
   grid-column: 2/-2;
+  padding-bottom: var(--spacing-0400);
 
   @include u.breakpoint(large) {
     grid-column: 2/8;

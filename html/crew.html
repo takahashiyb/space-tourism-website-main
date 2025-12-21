@@ -24,6 +24,41 @@
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body>
+    <dialog class="js-dialog">
+      <div class="grid-columns grid-columns__dialog">
+        <button class="button_close js-button_close">
+          <img
+            class="js-button_close"
+            src="../assets/shared/icon-close.svg"
+            alt="icon close"
+          />
+        </button>
+        <nav class="dialog__nav">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-option" href="../index.html">
+                <span>00</span> HOME
+              </a>
+            </li>
+            <li>
+              <a class="nav-option" href="../html/destination.html">
+                <span>01</span> DESTINATION
+              </a>
+            </li>
+            <li>
+              <a class="nav-option selected" href="../html/crew.html" inert>
+                <span>02</span> CREW
+              </a>
+            </li>
+            <li>
+              <a class="nav-option" href="../html/technology.html">
+                <span>03</span> TECHNOLOGY
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </dialog>
     <div class="background background__crew">
       <header>
         <div class="grid-columns grid-columns__header group-header">

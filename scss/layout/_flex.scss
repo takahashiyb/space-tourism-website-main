@@ -34,13 +34,16 @@
 
   &__homepage-text {
     gap: var(--spacing-0300);
+
+    @include u.breakpoint(medium) {
+      gap: normal;
+    }
   }
 
   &__destination-details,
   &__crew-details {
     align-items: center;
     gap: auto;
-    // var(--spacing-0300)
   }
 
   &__crew {
