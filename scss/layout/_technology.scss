@@ -20,6 +20,7 @@
   min-height: 0;
   max-height: 300px;
   height: 100%;
+  overflow: hidden;
 
   @include u.breakpoint(large) {
     grid-column: 9/-1;
@@ -58,6 +59,10 @@
 .technology-text,
 .technology-title {
   grid-column: 2/-2;
+
+  @include u.breakpoint(large) {
+    overflow: hidden;
+  }
 }
 
 .technology-text {

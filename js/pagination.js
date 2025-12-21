@@ -108,7 +108,7 @@ function displayChangeTechnology(item, list) {
 
   const name = document.querySelector(".js-technology-name");
   const description = document.querySelector(".js-technology-description");
-  const image = document.querySelector(".container__image-technology");
+  // const image = document.querySelector(".container__image-technology");
   const small = document.querySelector(".js-image-small-technology");
   const large = document.querySelector(".js-image-large-technology");
 
@@ -119,5 +119,5 @@ function displayChangeTechnology(item, list) {
 
   slideInBlur(name);
   slideInBlur(description);
-  slideInBlur(image);
+  slideInBlur(small);
 }
