@@ -101,8 +101,9 @@ function displayChangeTechnology(item, list) {
   const pullData = item.dataset.index;
   const object = list.find((item) => item.name.toLowerCase() === pullData);
 
-  const name = document.querySelector(".technology-name");
-  const description = document.querySelector(".technology-text p");
+  const name = document.querySelector(".js-technology-name");
+  const description = document.querySelector(".js-technology-description");
+  const image = document.querySelector(".container__image-technology");
   const small = document.querySelector(".js-image-small-technology");
   const large = document.querySelector(".js-image-large-technology");
 
@@ -110,4 +111,16 @@ function displayChangeTechnology(item, list) {
   description.textContent = object.description;
   small.src = `.${object.images.landscape}`;
   large.srcset = `.${object.images.portrait}`;
+
+  name.classList.remove("slide-in");
+  void name.offsetWidth;
+  name.classList.add("slide-in");
+
+  description.classList.remove("slide-in");
+  void description.offsetWidth;
+  description.classList.add("slide-in");
+
+  image.classList.remove("slide-in");
+  void image.offsetWidth;
+  image.classList.add("slide-in");
 }
