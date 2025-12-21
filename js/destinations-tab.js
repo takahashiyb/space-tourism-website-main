@@ -1,4 +1,4 @@
-import { getJson } from "./util.js";
+import { getJson, slideInDark, slideInBlur } from "./util.js";
 
 async function loadDestinationData() {
   const json = await getJson;
@@ -93,4 +93,8 @@ function loadDestinationDisplay(object) {
   image.src = object.image;
   text.innerHTML = object.text;
   specs.innerHTML = object.specs;
+
+  slideInDark(image);
+  slideInBlur(text);
+  slideInBlur(specs);
 }

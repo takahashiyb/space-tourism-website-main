@@ -8,9 +8,10 @@
   }
 }
 
-@keyframes slide-in {
+@keyframes slide-in-dark {
   from {
     transform: translateX(-100%);
+    filter: brightness(0) blur(10px);
   }
 
   to {
@@ -18,6 +19,21 @@
   }
 }
 
-.slide-in {
-  animation: slide-in 1000ms;
+.slide-in-dark {
+  animation: slide-in-dark 1200ms ease-in-out;
+}
+
+@keyframes slide-in-blur {
+  from {
+    transform: translateX(-100%);
+    filter: blur(10px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-blur {
+  animation: slide-in-blur 1200ms ease-in-out;
 }

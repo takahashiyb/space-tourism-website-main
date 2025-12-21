@@ -1,4 +1,4 @@
-import { getJson } from "./util.js";
+import { getJson, slideInBlur, slideInDark } from "./util.js";
 
 export function addPaginationFunction(section) {
   const pagination = document.querySelector(section);
@@ -95,6 +95,11 @@ function displayChangeCrew(item, list) {
   name.textContent = object.name;
   description.textContent = object.bio;
   image.src = `.${object.images.webp}`;
+
+  slideInBlur(title);
+  slideInBlur(name);
+  slideInBlur(description);
+  slideInBlur(image);
 }
 
 function displayChangeTechnology(item, list) {
@@ -112,15 +117,7 @@ function displayChangeTechnology(item, list) {
   small.src = `.${object.images.landscape}`;
   large.srcset = `.${object.images.portrait}`;
 
-  name.classList.remove("slide-in");
-  void name.offsetWidth;
-  name.classList.add("slide-in");
-
-  description.classList.remove("slide-in");
-  void description.offsetWidth;
-  description.classList.add("slide-in");
-
-  image.classList.remove("slide-in");
-  void image.offsetWidth;
-  image.classList.add("slide-in");
+  slideInBlur(name);
+  slideInBlur(description);
+  slideInBlur(image);
 }

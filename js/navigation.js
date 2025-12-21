@@ -15,7 +15,7 @@ export function functionHamburger() {
 
   const media = window.matchMedia("(min-width: 43.75em)");
 
-  media.addEventListener("change", (e) => {
+  media.addEventListener("change", () => {
     dialog.close();
   });
 }
