@@ -9,6 +9,7 @@ dialog[open] {
   width: 100%;
   color: inherit;
   outline: none;
+  animation: slide-down 1000ms;
 }
 
 .button_close {
